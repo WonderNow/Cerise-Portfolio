@@ -20,7 +20,7 @@
             <p>Hello!</p>
         </div>
         <div id="header-banner"></div>
-        <a href="#"><h1 class="appear_3rd">Cerise</h1></a>
+        <a href="index.html"><h1 class="appear_3rd">Cerise</h1></a>
         <a href="https://www.instagram.com/cerisegce/" target="_blank" aria-label="View on Instagram">
             <div class="instagram_logo_container">
                 <i class="fa fa-instagram" id="insta_color" aria-hidden="true"><!-- Logo coloré --></i>
@@ -336,11 +336,8 @@
 
     <!-- Force le positionnement en haut de la page à chaque reload -->
     <script>
-        window.addEventListener('load', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        window.addEventListener('unload', function(event) {
+            window.scrollTo(0, 0); // Fait défiler la page en haut
         });
     </script>
 
