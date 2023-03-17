@@ -13,6 +13,7 @@
     <link rel="preload" href="./fonts/silka-regular-webfont/silka-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" as="style">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -299,47 +300,8 @@
             </ul>
         </section>
     </main>
-
     <footer>
         <p>© 2023 Cerise &#127826; | <a href="https://github.com/WonderNow"  target="_blank">Made with ♥ by Tom</a></p>
     </footer>
-
-    <!-- apparition des éléments au scroll -->
-    <script>
-        window.addEventListener('scroll', function() {
-          let elements = document.querySelectorAll('.appear');
-          for (let i = 0; i < elements.length; i++) {
-            let element = elements[i];
-            let distanceFromTop = element.getBoundingClientRect().top;
-            if (distanceFromTop - window.innerHeight + 100 < 0) {
-              element.classList.add('appear-active');
-            } else {
-              element.classList.remove('appear-active');
-            }
-          }
-        });
-    </script>
-
-    <!-- Désactiver le scrolling pendant 3 secondes -->
-    <script>
-        // Sélectionner le corps de la page
-        var body = document.querySelector('body');
-
-        // Ajouter la classe 'no-scroll' pour désactiver le scrolling
-        body.classList.add('no-scroll');
-
-        // Réactiver le scrolling après 3 secondes
-        setTimeout(function(){
-            body.classList.remove('no-scroll');
-        }, 3000);
-    </script>
-
-    <!-- Force le positionnement en haut de la page à chaque reload -->
-    <script>
-        window.addEventListener('pagehide', function(event) {
-            window.scrollTo(0, 0); // Fait défiler la page en haut
-        });
-    </script>
-
 </body>
 </html>
