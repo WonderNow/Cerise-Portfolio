@@ -336,7 +336,7 @@
 
     <!-- Force le positionnement en haut de la page à chaque reload -->
     <script>
-        window.addEventListener('unload', function(event) {
+        window.addEventListener('pagehide', function(event) {
             window.scrollTo(0, 0); // Fait défiler la page en haut
         });
     </script>
