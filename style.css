@@ -206,7 +206,7 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text; /* Also define standard property for compatibility */
     -webkit-text-fill-color: transparent;
-    font-size:calc(30px + 1.1vw); /* Taille du logo coloré */
+    font-size:calc(29px + 1.1vw); /* Taille du logo coloré */
 }
 
 #insta_white {
@@ -219,7 +219,30 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text; /* Also define standard property for compatibility */
     -webkit-text-fill-color: transparent;
-    font-size:calc(30px + 1.1vw); /* Taille du logo blanc */
+    font-size:calc(29px + 1.1vw); /* Taille du logo blanc */
+}
+
+.location {
+    position: absolute;
+    bottom: 4vh;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    opacity: 0;
+    animation: show-cerise-and-insta 1s ease-out 3s forwards;
+}
+
+#location_pin {
+    font-size: 1.2em;
+}
+
+.location p {
+    font-size: 1.25em;
+    padding-bottom: 1px;
+    margin-left: 8px;
 }
 
 /* ~~ MAIN ~~ */
@@ -378,6 +401,14 @@ footer a:hover {
 @media screen and (max-width: 500px) {
     #header-banner::after {
         display: none;
+    }
+    .location {
+        padding: 4px 8px;
+        background: rgba(0, 0, 0, 0.65);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
     }
     main {
         margin: 0 4vw;
