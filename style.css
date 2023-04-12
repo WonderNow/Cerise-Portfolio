@@ -237,12 +237,76 @@ h1 {
 
 #location_pin {
     font-size: 1.2em;
+    animation: rotate-animation 3s infinite linear;
 }
 
 .location p {
     font-size: 1.25em;
     padding-bottom: 1px;
     margin-left: 8px;
+}
+
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(-20deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+            transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+	100% {
+		transform: rotate(-20deg);
+	}
+}
+
+/* Scroll */
+
+.scroll-box {
+    position: absolute;
+    bottom: 7vh;
+    left: 58px;
+    opacity: 0;
+    /* left: 50%;
+    transform: translateX(-50%); Pour center le scroll */
+    animation: show-cerise-and-insta 1s ease-out 4.5s forwards;
+}
+
+.scroll-box span {
+	width: 22px;
+	height: 22px;
+    display: block;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	transform: rotate(45deg);
+	margin: -8px;
+	animation: animate 2.5s infinite;
+}
+
+.scroll-box span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.scroll-box span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.9;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+        transform: rotate(45deg) translate(10px, 10px);
+	}
 }
 
 /* ~~ MAIN ~~ */
@@ -404,13 +468,29 @@ footer a:hover {
     #header-banner::after {
         display: none;
     }
+    h1 {
+        top: 3vh;
+        left: 25px;
+    }
+    #insta_color {
+        top: 3.4vh;
+        right: 30px;
+    }
+    #insta_white {
+        top: 3.4vh;
+        right: 25px;
+    }
     .location {
+        bottom: 3.5vh;
+        right: 25px;
         padding: 4px 8px;
         background: rgba(0, 0, 0, 0.65);
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 6px );
         -webkit-backdrop-filter: blur( 6px );
         border-radius: 10px;
+    }
+    .scroll-box {
+        display: none;
     }
     main {
         margin: 0 4vw;
