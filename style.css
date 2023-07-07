@@ -235,6 +235,10 @@ h1 {
     animation: show-cerise-and-insta 1s ease-out 3s forwards;
 }
 
+.mans {
+    margin-bottom: 35px;
+}
+
 #location_pin {
     font-size: 1.2em;
     animation: rotate-animation 3s infinite linear;
@@ -454,7 +458,8 @@ footer a:hover {
         margin: 0 16vw;
     }
     .galerie li {
-        height: 70vh;
+        height: auto;
+        max-height: 70vh;
     }
 }
 
@@ -488,6 +493,9 @@ footer a:hover {
         backdrop-filter: blur( 6px );
         -webkit-backdrop-filter: blur( 6px );
         border-radius: 10px;
+    }
+    .mans {
+        margin-bottom: 45px;
     }
     .scroll-box {
         display: none;
