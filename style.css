@@ -358,7 +358,7 @@ h2 {
 }
 
 .galerie {
-    max-width: 100%;
+    max-width: 120rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
